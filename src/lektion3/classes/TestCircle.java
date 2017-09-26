@@ -1,5 +1,10 @@
 package lektion3.classes;
 
+/**
+ * 
+ * @author mohamed.alhashemi
+ *
+ */
 public class TestCircle {
 
 	public static void main(String[] args) {
