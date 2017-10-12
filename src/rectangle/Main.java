@@ -7,15 +7,17 @@ public class Main {
 	}
 
 	public static void main(String[] args) {
-		Rectangle rectanglel = new Rectangle(3.0f, 4.0f);
+		Rectangle rectanglel = new Rectangle() ;
 		
-		System.out.println( rectanglel.getLength() );
+		rectanglel.setlength(80f);
 		
-		rectanglel.setLength(75.45f);
+		rectanglel.setWidth(9f);
 		
-		System.out.println( rectanglel.getLength() );
+		System.out.println( rectanglel.getlength() );
 		
-		System.out.println( rectanglel.getArea() );
+		System.out.println( rectanglel.getWidth()  );
+		
+		System.out.println( rectanglel.getPerimeter() );
 		
 		System.out.println( rectanglel.toString() );
 	}

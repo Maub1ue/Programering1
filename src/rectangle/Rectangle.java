@@ -9,14 +9,14 @@ public class Rectangle {
 	
 	public Rectangle(float length, float width) {
 		this.length = length;
-		this.setWidth(width);
+		this.width = width;
 	}
 	
-	public float getLength() {
+	public float getlength() {
 		return length;
 	}
 	
-	public void setLength() {
+	public void setlength(float length) {
 		this.length = length;
 	}
 
@@ -29,5 +29,16 @@ public class Rectangle {
 	}
 	
 	
+	public double getArea() {
+		return length * width; 	
+	}
+	
+	public double getPerimeter() {
+		return length*2 + width*2;
+	}
 
+	public String toString() {
+		return "Rectangle[length=" + length + " width=" + width + "]";
+	}
+	
 }
