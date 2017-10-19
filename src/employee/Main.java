@@ -2,13 +2,18 @@ package employee;
 
 public class Main {
 
-	public Main() {
-		// TODO Auto-generated constructor stub
-	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
+		Employee employee1 = new Employee(16, "Jonas", "Andrée", 5000);
+				
+		
+		System.out.println(employee1.getSalary());
+		System.out.println(employee1.getAnnualSalary() );
+		System.out.println(employee1.raiseSalary(20) );
+		System.out.println(employee1.toString() );
+				
+				
 	}
 
 }
