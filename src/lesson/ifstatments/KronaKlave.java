@@ -10,7 +10,7 @@ public class KronaKlave {
 		int wins = 0;
 		int loss = 0;
 
-		int Nmbgames = 20;
+		int Nmbgames = 3;
 
 		for (int i = 0; i < Nmbgames; i++) {
 			System.out.println("Game: " + (i + 1));
@@ -25,17 +25,17 @@ public class KronaKlave {
 
 		// Randomiser
 		Random RandomGenerator = new Random();
-		boolean CoinFlippValue = RandomGenerator.nextBoolean();
+		int CoinFlippValue = RandomGenerator.nextInt(2);
 
 		// om det du valde blir rätt så -
-		if (CoinFlippValue == true) {
+		if (CoinFlippValue == 0) {
 			System.out.println("Pickle Rick");
 		} else {
 			System.out.println("Morten");
 		}
 		// - Vinner du
-		if (CoinFlippValue == true && usersPick.equals("pickle rick")
-				|| CoinFlippValue == false && usersPick.equals("morten")) {
+		if (CoinFlippValue == 0 && usersPick.equals("pickle rick")
+				|| CoinFlippValue == 1 && usersPick.equals("morten")) {
 			System.out.println("Wubba lubba WINWIN");
 			wins++;
 
