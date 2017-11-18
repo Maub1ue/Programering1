@@ -1,6 +1,5 @@
 package test;
 
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -10,25 +9,23 @@ public class Test {
 		int wins = 0;
 		int loss = 0;
 		int draw = 0;
-		
-		System.out.println("How many games?");
-		
-		Scanner gamesC = new Scanner(System.in);
+
+		System.out.println("Hur många spel?");
+
+		Scanner gamesC = new Scanner(System.in); // Läser hur många games du vill ha
 		int nmbGames = gamesC.nextInt();
 		
-		
-		int Games = nmbGames;
+
+		int Games = nmbGames; // Det bli
 
 		for (int i = 0; i < Games; i++) {
-			System.out.println("Game nr " + (i + 1));
+			System.out.println("Omgång " + (i + 1));
 
-			
 			Scanner usersChoise = new Scanner(System.in);
-			System.out.println("Sten, Sax, Påse?");
+			System.out.println("Sten, Sax eller Påse?");
 			String usersPick = usersChoise.nextLine().toLowerCase();
 			
 			
-
 			Random RandomGenerator = new Random();
 			int ThreeValue = RandomGenerator.nextInt(3);
 
@@ -53,9 +50,13 @@ public class Test {
 				draw++;
 				System.out.println("Lika");
 
-			} else {
+			} else if (ThreeValue == 0 && usersPick.equals("sax")
+					|| ThreeValue == 1 && usersPick.equals("påse")
+					|| ThreeValue == 2 && usersPick.equals("sten")) {
 				loss++;
 				System.out.println("PC Vann");
+			} else {
+				System.out.println("nej nej");
 			}
 
 		}

@@ -1,6 +1,5 @@
 package stensax;
 
-
 import java.util.Random;
 import java.util.Scanner;
 
@@ -11,7 +10,12 @@ public class Stensax {
 		int loss = 0;
 		int draw = 0;
 
-		int Games = 5;
+		System.out.println("How many games?");
+
+		Scanner gamesC = new Scanner(System.in); // Läser hur många games du vill ha
+		int nmbGames = gamesC.nextInt();
+
+		int Games = nmbGames; // Det bli
 
 		for (int i = 0; i < Games; i++) {
 			System.out.println("Game nr " + (i + 1));
